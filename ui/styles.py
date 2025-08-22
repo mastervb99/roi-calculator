@@ -369,40 +369,60 @@ def load_css():
             100% {{ transform: rotate(360deg); }}
         }}
         
-        /* Streamlit Built-in Metrics Override */
-        [data-testid="metric-container"] {{
-            background: white;
-            border: 2px solid {BITSCOPIC_COLORS['primary']};
-            border-left: 6px solid {BITSCOPIC_COLORS['orange']};
-            padding: 16px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        /* Streamlit Built-in Metrics Override - More Specific Selectors */
+        div[data-testid="metric-container"] {{
+            background: white !important;
+            border: 2px solid {BITSCOPIC_COLORS['primary']} !important;
+            border-left: 6px solid {BITSCOPIC_COLORS['orange']} !important;
+            padding: 16px !important;
+            border-radius: 8px !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
         }}
         
-        [data-testid="metric-container"] > div {{
-            width: fit-content;
-            margin: 0 auto;
+        div[data-testid="metric-container"] > div {{
+            width: fit-content !important;
+            margin: 0 auto !important;
         }}
         
-        [data-testid="metric-container"] [data-testid="stMetricValue"] {{
-            font-size: 1.4em !important;
+        div[data-testid="metric-container"] div[data-testid="stMetricValue"] {{
+            font-size: 1.2em !important;
             font-weight: 700 !important;
             color: {BITSCOPIC_COLORS['primary']} !important;
-            text-align: center;
+            text-align: center !important;
+            line-height: 1.2 !important;
         }}
         
-        [data-testid="metric-container"] [data-testid="stMetricLabel"] {{
-            font-size: 0.9em !important;
+        div[data-testid="metric-container"] div[data-testid="stMetricValue"] > div {{
+            font-size: 1.2em !important;
+            font-weight: 700 !important;
+            color: {BITSCOPIC_COLORS['primary']} !important;
+        }}
+        
+        div[data-testid="metric-container"] div[data-testid="stMetricLabel"] {{
+            font-size: 0.85em !important;
             color: {BITSCOPIC_COLORS['dark_text']} !important;
             font-weight: 600 !important;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            text-align: center !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
         }}
         
-        [data-testid="metric-container"] [data-testid="stMetricDelta"] {{
-            font-size: 0.8em !important;
-            text-align: center;
+        div[data-testid="metric-container"] div[data-testid="stMetricDelta"] {{
+            font-size: 0.75em !important;
+            text-align: center !important;
+        }}
+        
+        /* Force override any default Streamlit metric styling */
+        .stMetric {{
+            font-size: 1.2em !important;
+        }}
+        
+        .stMetric > div {{
+            font-size: 1.2em !important;
+        }}
+        
+        .stMetric [data-testid="stMetricValue"] {{
+            font-size: 1.2em !important;
         }}
         
         /* Responsive Design */
@@ -419,8 +439,16 @@ def load_css():
                 font-size: 1.5em;
             }}
             
-            [data-testid="metric-container"] [data-testid="stMetricValue"] {{
-                font-size: 1.2em !important;
+            div[data-testid="metric-container"] div[data-testid="stMetricValue"] {{
+                font-size: 1.0em !important;
+            }}
+            
+            div[data-testid="metric-container"] div[data-testid="stMetricValue"] > div {{
+                font-size: 1.0em !important;
+            }}
+            
+            .stMetric [data-testid="stMetricValue"] {{
+                font-size: 1.0em !important;
             }}
         }}
     </style>
