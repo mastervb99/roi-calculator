@@ -1,9 +1,13 @@
 streamlit>=1.28.0
 pandas>=2.0.0
 numpy>=1.24.0
+matplotlib>=3.7.0
 plotly>=5.17.0
 xlsxwriter>=3.1.0
 reportlab>=4.0.0
-pathlib
-datetime
+openpyxl>=3.1.0
+altair
+pyarrow
 Pillow>=10.0.0
+python-dateutil>=2.8.0
+tzlocal>=4.0
