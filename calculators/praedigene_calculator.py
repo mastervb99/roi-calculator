@@ -118,7 +118,8 @@ class PraediGeneCalculator:
             max_value=5000,
             value=params['annual_volume'],
             step=100,
-            help="Number of PGx tests performed annually"
+            help="Number of PGx tests performed annually",
+            key="adr_annual_volume"
         )
         
         adr_cost = st.sidebar.number_input(
@@ -127,7 +128,8 @@ class PraediGeneCalculator:
             max_value=15000,
             value=params['adr_cost'],
             step=500,
-            help="Average cost of an adverse drug reaction"
+            help="Average cost of an adverse drug reaction",
+            key="adr_cost_input"
         )
         
         patient_impact = st.sidebar.slider(
@@ -136,7 +138,8 @@ class PraediGeneCalculator:
             max_value=40.0,
             value=params['patient_impact'],
             step=5.0,
-            help="Percentage of patients benefiting from PGx testing"
+            help="Percentage of patients benefiting from PGx testing",
+            key="adr_patient_impact"
         )
         
         readmission_rate = st.sidebar.slider(
@@ -145,7 +148,8 @@ class PraediGeneCalculator:
             max_value=15.0,
             value=params['readmission_rate'],
             step=1.0,
-            help="Reduction in readmission rates"
+            help="Reduction in readmission rates",
+            key="adr_readmission_rate"
         )
         
         # Cost assumptions
@@ -198,7 +202,8 @@ class PraediGeneCalculator:
             max_value=1000,
             value=params['annual_volume'],
             step=50,
-            help="Number of TSO500 tests performed annually"
+            help="Number of TSO500 tests performed annually",
+            key="tso500_annual_volume"
         )
         
         treatment_cost = st.sidebar.number_input(
@@ -225,7 +230,8 @@ class PraediGeneCalculator:
             max_value=1500,
             value=params['fte_daily_cost'],
             step=100,
-            help="Daily cost of FTE time"
+            help="Daily cost of FTE time",
+            key="tso500_fte_daily_cost"
         )
         
         # Cost assumptions
