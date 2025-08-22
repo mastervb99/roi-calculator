@@ -358,7 +358,8 @@ class PraediGeneCalculator:
             max_value=1000,
             value=params['annual_volume'],
             step=50,
-            help="Number of cytogenetics cases annually"
+            help="Number of cytogenetics cases annually",
+            key="cytogenetics_annual_volume"
         )
         
         tech_time = st.sidebar.number_input(
@@ -367,7 +368,8 @@ class PraediGeneCalculator:
             max_value=6.0,
             value=params['tech_time'],
             step=0.5,
-            help="Technician hours per case"
+            help="Technician hours per case",
+            key="cytogenetics_tech_time"
         )
         
         rerun_cost = st.sidebar.number_input(
@@ -376,7 +378,8 @@ class PraediGeneCalculator:
             max_value=500,
             value=params['rerun_cost'],
             step=50,
-            help="Cost when a test needs to be rerun"
+            help="Cost when a test needs to be rerun",
+            key="cytogenetics_rerun_cost"
         )
         
         fte_daily_cost = st.sidebar.number_input(
@@ -385,7 +388,8 @@ class PraediGeneCalculator:
             max_value=1500,
             value=params['fte_daily_cost'],
             step=100,
-            help="Daily cost of FTE time"
+            help="Daily cost of FTE time",
+            key="cytogenetics_fte_daily_cost"
         )
         
         # Assumptions
