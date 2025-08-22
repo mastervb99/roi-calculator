@@ -68,10 +68,11 @@ def load_css():
         }}
         
         .metric-value {{
-            font-size: 2.8em;
-            font-weight: 900;
+            font-size: 1.8em;
+            font-weight: 700;
             color: {BITSCOPIC_COLORS['primary']};
             margin-bottom: 8px;
+            line-height: 1.2;
         }}
         
         .metric-label {{
@@ -379,7 +380,7 @@ def load_css():
             }}
             
             .metric-value {{
-                font-size: 2em;
+                font-size: 1.5em;
             }}
         }}
     </style>
