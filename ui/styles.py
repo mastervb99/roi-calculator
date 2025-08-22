@@ -369,6 +369,42 @@ def load_css():
             100% {{ transform: rotate(360deg); }}
         }}
         
+        /* Streamlit Built-in Metrics Override */
+        [data-testid="metric-container"] {{
+            background: white;
+            border: 2px solid {BITSCOPIC_COLORS['primary']};
+            border-left: 6px solid {BITSCOPIC_COLORS['orange']};
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+        
+        [data-testid="metric-container"] > div {{
+            width: fit-content;
+            margin: 0 auto;
+        }}
+        
+        [data-testid="metric-container"] [data-testid="stMetricValue"] {{
+            font-size: 1.4em !important;
+            font-weight: 700 !important;
+            color: {BITSCOPIC_COLORS['primary']} !important;
+            text-align: center;
+        }}
+        
+        [data-testid="metric-container"] [data-testid="stMetricLabel"] {{
+            font-size: 0.9em !important;
+            color: {BITSCOPIC_COLORS['dark_text']} !important;
+            font-weight: 600 !important;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }}
+        
+        [data-testid="metric-container"] [data-testid="stMetricDelta"] {{
+            font-size: 0.8em !important;
+            text-align: center;
+        }}
+        
         /* Responsive Design */
         @media (max-width: 768px) {{
             .summary-grid {{
@@ -381,6 +417,10 @@ def load_css():
             
             .metric-value {{
                 font-size: 1.5em;
+            }}
+            
+            [data-testid="metric-container"] [data-testid="stMetricValue"] {{
+                font-size: 1.2em !important;
             }}
         }}
     </style>
