@@ -1,6 +1,7 @@
 """
 Bitscopic ROI Calculator
 Unified interface for PraediGene and PraediAlert ROI calculations
+Version 1.1 - Improved responsive design
 """
 
 import streamlit as st
